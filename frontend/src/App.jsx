@@ -6,6 +6,7 @@ import Cart from "./pages/Cart/Cart";
 import PlcaeOrder from "./pages/PlcaeOrder/PlcaeOrder";
 import { Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import AppDownload from "./components/AppDownload/AppDownload";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/placeorder" element={<PlcaeOrder />} />
+          
         </Routes>
       </div>
       <Footer />
