@@ -7,12 +7,15 @@ import PlcaeOrder from "./pages/PlcaeOrder/PlcaeOrder";
 import { Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import AppDownload from "./components/AppDownload/AppDownload";
-
+import { useState } from "react";
+import LoginPopup from "./components/LoginPopup/LoginPopup";
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <>
+    {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <> </>}
       <div className="app">
-        <Navbar />
+        <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
