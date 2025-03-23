@@ -13,7 +13,7 @@ const StoreContextProvider = (props) => {
     }));
   };
 
-  const removeFromcart = (itemID) => {
+  const removeFromCart = (itemID) => {
     setcartItems((prev) => {
       if (!prev[itemID]) return prev; // Prevent negative values
       const updatedItems = { ...prev, [itemID]: prev[itemID] - 1 };
@@ -26,7 +26,7 @@ const StoreContextProvider = (props) => {
     food_list,
     cartItems,
     addTocart,
-    removeFromcart,
+    removeFromCart,
     setcartItems,
   };
   useEffect(() => {
