@@ -2,7 +2,7 @@ import React, { Profiler, useContext } from "react";
 import "./Navbar.css";
 import { useState } from "react";
 import { assets } from "../../assets/assets";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { StoreContext } from "../StoreContext";
 const Navbar = ({ setShowLogin }) => {
   const { getTotalCartAmount , token, setToken} = useContext(StoreContext); 
@@ -13,7 +13,7 @@ const Navbar = ({ setShowLogin }) => {
     setToken("");
     Navigate("/");
   }
-  
+  const navigate=useNavigate();
   return (
     <div className="navbar">
       <Link to="/">
@@ -61,7 +61,7 @@ const Navbar = ({ setShowLogin }) => {
           <div className="nav-profile-dropdown">
             
             <ul>
-              <li><img src={assets.bag_icon} alt="" />Orders</li>
+              <li onClick={()=>navigate('/myorders')} ><img src={assets.bag_icon} alt="" />Orders</li>
               <hr />
               <li onClick={logout}  > <img src={assets.logout_icon} alt="" />Logout</li>
             </ul>

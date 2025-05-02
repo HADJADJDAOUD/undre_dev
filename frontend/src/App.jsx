@@ -6,9 +6,10 @@ import Cart from "./pages/Cart/Cart";
 import PlcaeOrder from "./pages/PlcaeOrder/PlcaeOrder";
 import { Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import AppDownload from "./components/AppDownload/AppDownload";
+import Verify from "./pages/Verify/Verify";
 import { useState } from "react";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
+import MyOrders from "./pages/MyOrders/MyOrders";
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlcaeOrder />} />
+          <Route path="/verify" element={<Verify  />} />
+          <Route path="/myorders" element={<MyOrders  />} />
           
         </Routes>
       </div>
