@@ -7,7 +7,7 @@ import validator from "validator";
 // login user
 
 const loginUser = async (req, res) => {
-
+    console.log("login user");
     const {email, password} = req.body;
     try{
         if(!email || !password){
