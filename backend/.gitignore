@@ -19,3 +19,7 @@ dist-ssr
 .DS_Store
 /uploads
 ./uploads
+
+# env
+.env
+.env.*
