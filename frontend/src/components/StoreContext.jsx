@@ -43,7 +43,7 @@ const StoreContextProvider = (props) => {
     getTotalCartAmount,
   };
   useEffect(() => {
-    console.log(cartItems);
+    // console.log(cartItems);
   }, [cartItems]);
   return (
     <StoreContext.Provider value={contextValue}>
